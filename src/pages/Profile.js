@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import ProfileCharacter from '../components/ProfileCharacter';
+
 import profileModel from '../models/profile';
-import CharacterModel from '../models/character'
+
+
+import { Link } from 'react-router-dom'
+
 
 class Profile extends Component {
     state = {
@@ -26,7 +30,8 @@ class Profile extends Component {
 
                 <h2>Welcome Back {this.state.profile.name} </h2>
                 <div>
-                    <ProfileCharacter />
+                <Link to ={`/characters/new`} >Create New Character</Link>
+                    <ProfileCharacter userId ={this.state.profile._id} />
                 </div>
             </div>
         );

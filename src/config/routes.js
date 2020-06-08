@@ -7,6 +7,7 @@ import CharacterShow from '../pages/CharacterShow'
 import Register from '../pages/Register'
 import Login from '../pages/Login'
 import Profile from '../pages/Profile'
+import NewCharacter from '../pages/NewCharacter'
 
 export default (props) =>(
     <Switch>
@@ -22,6 +23,7 @@ export default (props) =>(
 
 
         <Route exact path ='/' component = { Home } />
+        <Route path = '/characters/new' component = {NewCharacter} />
         <Route path = '/characters/:id' component = {CharacterShow} />
         <Route path = '/characters' component = { CharacterList} />
         
