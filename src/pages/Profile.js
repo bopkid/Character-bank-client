@@ -6,7 +6,8 @@ import CharacterModel from '../models/character'
 class Profile extends Component {
     state = {
         profile:{},
-        currentUser: this.props.match.params.id
+        currentUser: this.props.match.params.id,
+        characters: []
     }
     componentDidMount(){
         this.fetchData()

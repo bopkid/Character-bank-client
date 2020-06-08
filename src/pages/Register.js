@@ -7,6 +7,7 @@ class Register extends Component {
         email: "",
         password: "",
         password2: "",
+        character: []
     }
 
     handleChange = (e) =>{
