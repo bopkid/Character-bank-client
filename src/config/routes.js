@@ -19,6 +19,7 @@ export default (props) =>(
              />
     }} />
 
+
         <Route exact path ='/' component = { Home } />
         <Route path = '/characters/:id' component = {CharacterShow} />
         <Route path = '/characters' component = { CharacterList} />

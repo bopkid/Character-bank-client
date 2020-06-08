@@ -3,6 +3,7 @@ import React from 'react';
 import {Link} from 'react-router-dom'
 
 const Header = (props) => {
+    console.log(props.currentUser)
     return (
         <header>
 
@@ -19,7 +20,7 @@ const Header = (props) => {
                     {props.currentUser ?
                     <>
                     <li><Link to = {'/profile'}>Profile</Link></li>
-                    <li><a href = '/logout' onClick  ={props.logout}>Log out</a></li>
+                    <li><a href = '/logout' onClick  = {props.logout}>Log out</a></li>
                     </>
 
                     :
