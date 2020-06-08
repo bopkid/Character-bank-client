@@ -6,10 +6,11 @@ import CharacterList from '../pages/CharacterList'
 import CharacterShow from '../pages/CharacterShow'
 import Register from '../pages/Register'
 import Login from '../pages/Login'
+import Profile from '../pages/Profile'
 
 export default (props) =>(
     <Switch>
-        {/* <Route path = "/profile" component ={ Profile } /> */}
+        <Route path = '/profile/:id' component = { Profile}/>
         <Route path = '/register/' component = { Register} />
         <Route path="/login" render={ (routeComponentProps) => {
              return <Login 

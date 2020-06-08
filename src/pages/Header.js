@@ -19,7 +19,7 @@ const Header = (props) => {
 
                     {props.currentUser ?
                     <>
-                    <li><Link to = {'/profile'}>Profile</Link></li>
+                    <li><Link to = {`/profile/${props.currentUser}`}>Profile</Link></li>
                     <li><a href = '/logout' onClick  = {props.logout}>Log out</a></li>
                     </>
 
