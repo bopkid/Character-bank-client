@@ -9,7 +9,7 @@ class NewCharacter extends Component {
         System: '',
         img:'',
         Bio: '',
-        Feats: [{Feat:''}] ,
+        Feats: [{feats:''}] ,
         Inventory: [{inven:''}] ,
         Magic: [{magic:''}] ,
         Skill: [{name:'', level:''}] ,
@@ -29,20 +29,21 @@ class NewCharacter extends Component {
     handleChange = (e) =>{
        
         if (["name","level"].includes(e.target.className)){
-            console.log('here')
+            console.log('skill')
             let skill = [...this.state.Skill]
             skill[e.target.dataset.id][e.target.className] = e.target.value
             this.setState({skill} , ()=>console.log(this.state.skill))
         }
-        else if (["Feat"].includes(e.target.className)){
+        else if (["feats"].includes(e.target.className)){
             console.log("feats")
             let feat = [...this.state.Feats]
             feat[e.target.dataset.id][e.target.className] = e.target.value
             this.setState({feat} , () =>console.log(this.state.feat))
         }
         else{
+            console.log('here')
         this.setState({
-       
+            
             [e.target.name] : e.target.value
         })
     }
@@ -57,7 +58,7 @@ class NewCharacter extends Component {
         }))
 
     }
-
+    
     NewFeat = (e) =>{
         console.log(this.state.Feats)
         e.preventDefault()
@@ -107,14 +108,22 @@ class NewCharacter extends Component {
                             <h2>Feat</h2>
                             <button onClick = {this.NewFeat}> Add New Feat</button>
                             {
-                                this.state.Feats.map((val,idx) =>{
-                                    let featId = `feat-${idx}`
-                                    return(
-                                        <div key = {idx}>
-                                            <label htmlFor ={featId}></label>
-                                        </div>
-                                    )
-                                })
+                              this.state.Feats.map((val ,idx) =>{
+                                  let featId = `feat-${idx}`
+                                  return(
+                                      <div key = {idx}>
+                                        <label htmlFor = {featId}>{` Feat #${idx+1}`}</label>
+                                        <input
+                                            type ="text"
+                                            name = {featId}
+                                            data-id ={idx}
+                                            id = {featId}
+                                            onChange = {this.handleChange}
+                                            className ="feats"
+                                        />
+                                      </div>
+                                  )
+                              })  
                             }
 
                         </div>
