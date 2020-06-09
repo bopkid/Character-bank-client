@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
+
 import CharacterModel from '../models/character'
+
 import SkillInput from '../components/SkillInput'
+import FeatInput from '../components/FeatInput'
 
 
 class NewCharacter extends Component {
@@ -107,24 +110,7 @@ class NewCharacter extends Component {
                         <div className  ="Feat">
                             <h2>Feat</h2>
                             <button onClick = {this.NewFeat}> Add New Feat</button>
-                            {
-                              this.state.Feats.map((val ,idx) =>{
-                                  let featId = `feat-${idx}`
-                                  return(
-                                      <div key = {idx}>
-                                        <label htmlFor = {featId}>{` Feat #${idx+1}`}</label>
-                                        <input
-                                            type ="text"
-                                            name = {featId}
-                                            data-id ={idx}
-                                            id = {featId}
-                                            onChange = {this.handleChange}
-                                            className ="feats"
-                                        />
-                                      </div>
-                                  )
-                              })  
-                            }
+                            <FeatInput feat = {this.state.Feats} handleChange = {this.handleChange}/>
 
                         </div>
                         
