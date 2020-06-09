@@ -93,7 +93,7 @@ class NewCharacter extends Component {
                                 value = {this.state.System}
                             />
                         </div>
-                        <div>
+                        <div className = "form-input">
                             <label htmlFor = "img">Img url:</label>
                             <input
                                 type="text"
@@ -102,16 +102,31 @@ class NewCharacter extends Component {
                                 value = {this.state.img}
                             />
                         </div>
-                        <div className = "Skill">
+                        <div className ="form-input bio">
+                            <label htmlFor = "Bio">Bio</label>
+                            <textarea
+                                type ="text"
+                                name = "Bio"
+                                onChange ={this.handleChange}
+                                value ={this.state.Bio}
+                            />
+                        </div>
+                        <div className = "Skill form-input">
                             <h2 >Skill</h2>
                             <button onClick = {this.NewSkill}>add New Skill</button>
                             <SkillInput skill= {this.state.Skill} handleChange = {this.handleChange}/>
                         </div>
-                        <div className  ="Feat">
+                        <div className  ="Feat form-input">
                             <h2>Feat</h2>
                             <button onClick = {this.NewFeat}> Add New Feat</button>
                             <FeatInput feat = {this.state.Feats} handleChange = {this.handleChange}/>
 
+                        </div>
+                        <div className = "Magic form-input">
+                            <h2>Magic</h2>
+                        </div>
+                        <div className = "Inventory form-input">
+                            <h2>Magic</h2>
                         </div>
                         
                         <input type = "submit" value = "Create New Character" />
