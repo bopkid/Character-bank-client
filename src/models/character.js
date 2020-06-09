@@ -11,6 +11,17 @@ class CharacterModel{
         .then(res => res.json())
         
     }
+    static create = (characterData) =>{
+        return fetch(`${url}/characters`,{
+            method: "POST", 
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body:JSON.stringify(characterData)
+        })
+        .then(res => res.json())
+
+    }
 }
 
 

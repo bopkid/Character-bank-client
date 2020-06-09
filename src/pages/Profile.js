@@ -30,7 +30,7 @@ class Profile extends Component {
 
                 <h2>Welcome Back {this.state.profile.name} </h2>
                 <div>
-                <Link to ={`/characters/new`} >Create New Character</Link>
+                <Link to ={`/profile/${this.state.profile._id}/new`} >Create New Character</Link>
                     <ProfileCharacter userId ={this.state.profile._id} />
                 </div>
             </div>

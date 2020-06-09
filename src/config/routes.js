@@ -11,6 +11,7 @@ import NewCharacter from '../pages/NewCharacter'
 
 export default (props) =>(
     <Switch>
+        <Route path = '/profile/:id/new' component = {NewCharacter} />  
         <Route path = '/profile/:id' component = { Profile}/>
         <Route path = '/register/' component = { Register} />
         <Route path="/login" render={ (routeComponentProps) => {
@@ -21,9 +22,7 @@ export default (props) =>(
              />
     }} />
 
-
         <Route exact path ='/' component = { Home } />
-        <Route path = '/characters/new' component = {NewCharacter} />
         <Route path = '/characters/:id' component = {CharacterShow} />
         <Route path = '/characters' component = { CharacterList} />
         
