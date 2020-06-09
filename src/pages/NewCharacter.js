@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CharacterModel from '../models/character'
+import SkillInput from '../components/SkillInput'
 
 
 class NewCharacter extends Component {
@@ -32,7 +33,14 @@ class NewCharacter extends Component {
             let skill = [...this.state.Skill]
             skill[e.target.dataset.id][e.target.className] = e.target.value
             this.setState({skill} , ()=>console.log(this.state.skill))
-        }else{
+        }
+        else if (["Feat"].includes(e.target.className)){
+            console.log("feats")
+            let feat = [...this.state.Feats]
+            feat[e.target.dataset.id][e.target.className] = e.target.value
+            this.setState({feat} , () =>console.log(this.state.feat))
+        }
+        else{
         this.setState({
        
             [e.target.name] : e.target.value
@@ -49,8 +57,17 @@ class NewCharacter extends Component {
         }))
 
     }
+
+    NewFeat = (e) =>{
+        console.log(this.state.Feats)
+        e.preventDefault()
+        this.setState((prevstate) =>({
+            Feats: [...prevstate.Feats, {feats: ""}]
+        }))
+    }
+
     render() {
-        
+
         console.log(this.state.Skill)
         return (
                     <form onSubmit = {this.handleSubmit}>
@@ -82,37 +99,24 @@ class NewCharacter extends Component {
                             />
                         </div>
                         <div className = "Skill">
-                        <h2 >Skill</h2>
-                        <button onClick = {this.NewSkill}>add new skill</button>
-                        {
-                            this.state.Skill.map((val,idx) =>{
-                                let skillid = `skill-${idx}`,levelId = `level-${idx}`
-                                return(
-                                    <div key = {idx}>
-                                    <label htmlFor = {skillid}>{`Skill #${idx+1}`}</label>
-                                    <input
-                                        type = "text"
-                                        name = {skillid}
-                                        data-id = {idx}
-                                        id = {skillid}
-                                        onChange = {this.handleChange}
-                                        className = "name"
-                                    />
-                                 <label htmlFor = {levelId}>{`level #${idx+1}`}</label>
-                                    <input
-                                        type = "text"
-                                        name = {levelId}
-                                        data-id = {idx}
-                                        id = {levelId}
-                                        onChange = {this.handleChange}
-                                        className = "level"
-                                    />
-                                    </div>
-                                    
-                                )
-                            })
-                        }
-                            
+                            <h2 >Skill</h2>
+                            <button onClick = {this.NewSkill}>add New Skill</button>
+                            <SkillInput skill= {this.state.Skill} handleChange = {this.handleChange}/>
+                        </div>
+                        <div className  ="Feat">
+                            <h2>Feat</h2>
+                            <button onClick = {this.NewFeat}> Add New Feat</button>
+                            {
+                                this.state.Feats.map((val,idx) =>{
+                                    let featId = `feat-${idx}`
+                                    return(
+                                        <div key = {idx}>
+                                            <label htmlFor ={featId}></label>
+                                        </div>
+                                    )
+                                })
+                            }
+
                         </div>
                         
                         <input type = "submit" value = "Create New Character" />
