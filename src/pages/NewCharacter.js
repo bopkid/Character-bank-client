@@ -4,7 +4,8 @@ import CharacterModel from '../models/character'
 
 import SkillInput from '../components/SkillInput'
 import FeatInput from '../components/FeatInput'
-
+import InventoryInput from '../components/InventoryInput';
+import MagicInput from '../components/MagicInput'
 
 class NewCharacter extends Component {
     state = {
@@ -37,6 +38,16 @@ class NewCharacter extends Component {
             skill[e.target.dataset.id][e.target.className] = e.target.value
             this.setState({skill} , ()=>console.log(this.state.skill))
         }
+        else if (["magic"].includes(e.target.className)){
+
+        }  
+        else if (["inven"].includes(e.target.className)){
+            console.log('inven')
+            let inven  = [...this.state.Inventory]
+            inven[e.target.dataset.id][e.target.className] = e.target.value
+            this.setState({inven} ,() =>console.log(this.state.Inventory))
+        }   
+        
         else if (["feats"].includes(e.target.className)){
             console.log("feats")
             let feat = [...this.state.Feats]
@@ -49,7 +60,7 @@ class NewCharacter extends Component {
             
             [e.target.name] : e.target.value
         })
-    }
+        }
     }
 
     NewSkill = (e) =>{
@@ -67,6 +78,14 @@ class NewCharacter extends Component {
         e.preventDefault()
         this.setState((prevstate) =>({
             Feats: [...prevstate.Feats, {feats: ""}]
+        }))
+    }
+
+    newInven = (e) =>{
+        console.log(this.state.Inventory)
+        e.preventDefault()
+        this.setState((prevstate) =>({
+            Inventory: [...prevstate.Inventory, {inven: ""}]
         }))
     }
 
@@ -124,9 +143,12 @@ class NewCharacter extends Component {
                         </div>
                         <div className = "Magic form-input">
                             <h2>Magic</h2>
+                           
                         </div>
                         <div className = "Inventory form-input">
-                            <h2>Magic</h2>
+                            <h2>Inventory</h2>
+                            <button onClick = {this.newInven}>Add new Item</button>
+                            <InventoryInput inven = {this.state.Inventory} handleChange ={this.handleChange} />
                         </div>
                         
                         <input type = "submit" value = "Create New Character" />
