@@ -4,7 +4,8 @@ import CharacterModel from '../models/character';
 
 import SkillShow from '../components/SkillShow';
 import FeatsShow from '../components/FeatsShow';
-import InventoryShow from '../components/InventoryShow'
+import InventoryShow from '../components/InventoryShow';
+import MagicShow from '../components/MagicShow';
 
 
 class CharacterShow extends Component {
@@ -36,6 +37,7 @@ class CharacterShow extends Component {
       const skill= this.state.character.Skill
       const feat = this.state.character.Feats
       const inven =this.state.character.Inventory
+      const magic = this.state.character.Magic
       console.log(feat)
         return (
             
@@ -59,6 +61,10 @@ class CharacterShow extends Component {
                 <div className = "inventory">
                     <h2>Inventory</h2>
                     <InventoryShow inven = {inven} />
+                </div>
+                <div className = "Magic">
+                    <h2>Magic</h2>
+                    <MagicShow magic = {magic}/>
                 </div>
             </div>
         );
