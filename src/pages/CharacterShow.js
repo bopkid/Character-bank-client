@@ -35,6 +35,7 @@ class CharacterShow extends Component {
     //   console.log(this.state.character.Skill)
       const skill= this.state.character.Skill
       const feat = this.state.character.Feats
+      const inven =this.state.character.Inventory
       console.log(feat)
         return (
             
@@ -57,6 +58,7 @@ class CharacterShow extends Component {
                 </div>
                 <div className = "inventory">
                     <h2>Inventory</h2>
+                    <InventoryShow inven = {inven} />
                 </div>
             </div>
         );
