@@ -4,12 +4,16 @@ import CharacterModel from '../models/character'
 
 class CharacterShow extends Component {
     state= {
-        character: {},
-        currentCharacer: this.props.match.params.id
+        character: {
+            Skill:[{name:'', level: ''}],
+        },
+        currentCharacer: this.props.match.params.id,
+        skill: []
     }
 
     componentDidMount(){
         this.fetchData()
+        
     }
 
     fetchData = () =>{  
@@ -20,9 +24,11 @@ class CharacterShow extends Component {
         .catch(err => console.log(err))
     }
     render() {
-        const skill = this.state.character.Skill
-        console.log(skill)
+    //   console.log(this.state.character.Skill)
+      const skill= this.state.character.Skill
+      console.log(skill.name)
         return (
+            
             <div>
                 <h2>{this.state.character.Name}</h2>
                 <img src ={this.state.character.img} alt = {this.state.character.name}/>
@@ -30,9 +36,20 @@ class CharacterShow extends Component {
                 <div>
                     <h2>System:</h2>
                     <p>{this.state.character.System}</p>
+                   
                 </div>
-                <div>
-                  <p></p>
+                <div className = "skill">
+                    <h2>Skill</h2>
+                   {
+                    skill.map((e) =>{
+                        return(
+                            <div>
+                          <p>{e.name} : {e.level}</p>
+                            </div>
+                        )
+                     
+                    })
+                   }
                 </div>
             </div>
         );
