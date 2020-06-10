@@ -3,15 +3,15 @@ import React from 'react';
 const InventoryInput = (props) => {
     return (
         props.inven.map((val ,idx) =>{
-            let featId = `feat-${idx}`
+            let invenId = `feat-${idx}`
             return(
                 <div key = {idx}>
-                  <label htmlFor = {featId}>{` Feat #${idx+1}`}</label>
+                  <label htmlFor = {invenId}>{` Feat #${idx+1}`}</label>
                   <input
                       type ="text"
-                      name = {featId}
+                      name = {invenId}
                       data-id ={idx}
-                      id = {featId}
+                      id = {invenId}
                       onChange = {props.handleChange}
                       className ="inven"
                   />

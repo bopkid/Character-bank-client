@@ -39,7 +39,10 @@ class NewCharacter extends Component {
             this.setState({skill} , ()=>console.log(this.state.skill))
         }
         else if (["magic"].includes(e.target.className)){
-
+            console.log('magic')
+            let magic = [...this.state.Magic]
+            magic[e.target.dataset.id][e.target.className] = e.target.value
+            this.setState({magic}, () =>console.log(this.state.Magic))
         }  
         else if (["inven"].includes(e.target.className)){
             console.log('inven')
@@ -86,6 +89,14 @@ class NewCharacter extends Component {
         e.preventDefault()
         this.setState((prevstate) =>({
             Inventory: [...prevstate.Inventory, {inven: ""}]
+        }))
+    }
+    
+    newMagic = (e) =>{
+        console.log(this.state.Magic)
+        e.preventDefault()
+        this.setState((prevstate) =>({
+            Magic: [...prevstate.Magic, {magic: ""}]
         }))
     }
 
@@ -143,7 +154,8 @@ class NewCharacter extends Component {
                         </div>
                         <div className = "Magic form-input">
                             <h2>Magic</h2>
-                           
+                           <button onClick = {this.newMagic}>Add new magic</button>
+                           <MagicInput magic = {this.state.Magic} handleChange = {this.handleChange} />
                         </div>
                         <div className = "Inventory form-input">
                             <h2>Inventory</h2>
