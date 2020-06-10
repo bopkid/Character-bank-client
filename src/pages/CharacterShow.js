@@ -1,12 +1,18 @@
 import React, { Component } from 'react';
-import CharacterModel from '../models/character'
-import SkillShow from '../components/SkillShow'
+
+import CharacterModel from '../models/character';
+
+import SkillShow from '../components/SkillShow';
+import FeatsShow from '../components/FeatsShow';
 
 
 class CharacterShow extends Component {
     state= {
         character: {
             Skill:[{name:'', level: ''}],
+            Feats:[{feats:''}],
+            Inventory:[{inven:''}],
+            Magic:[{magic:''}]
         },
         currentCharacer: this.props.match.params.id,
        
@@ -27,7 +33,8 @@ class CharacterShow extends Component {
     render() {
     //   console.log(this.state.character.Skill)
       const skill= this.state.character.Skill
-      console.log(skill)
+      const feat = this.state.character.Feats
+      console.log(feat)
         return (
             
             <div>
@@ -42,6 +49,10 @@ class CharacterShow extends Component {
                 <div className = "skill">
                     <h2>Skill</h2>
                     <SkillShow skill = {skill}/>
+                </div>
+                <div className = "feat">
+                    <h2>Feats</h2>
+                    <FeatsShow feat = {feat}/>
                 </div>
             </div>
         );
