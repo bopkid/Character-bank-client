@@ -22,6 +22,11 @@ class CharacterModel{
         .then(res => res.json())
 
     }
+    static find = (userId) =>{
+        console.log('')
+        return fetch(`${url}/characters/user/${userId}`)
+        .then(res =>res.json())
+    }
 }
 
 

@@ -1,13 +1,17 @@
-import React, { Component } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom'
 
-class ProfileCharacter extends Component {
-    render() {
-        return (
-            <div>
-                this will contain character
-            </div>
-        );
-    }
+const ProfileCharacter = (props) => {
+    return (
+      props.characters.map((e,idx) =>{
+         return(
+             <div key = {idx}>
+
+                <Link >{e.Name}</Link>
+             </div>
+         )
+      })
+    );
 }
 
 export default ProfileCharacter;
