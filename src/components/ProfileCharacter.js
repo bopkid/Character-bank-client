@@ -7,7 +7,7 @@ const ProfileCharacter = (props) => {
          return(
              <div key = {idx}>
 
-                <Link >{e.Name}</Link>
+                <Link to= {`/characters/${e._id}`}>{e.Name}</Link>
              </div>
          )
       })
