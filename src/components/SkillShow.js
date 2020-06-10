@@ -5,7 +5,7 @@ const SkillShow = (props) => {
         props.skill.map((e,idx) =>{
             return(
                 <div key = {idx}>
-              <p>{e.name} : {e.level}</p>
+                    <p>{e.name} : {e.level}</p>
                 </div>
             )
          

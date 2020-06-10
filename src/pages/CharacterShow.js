@@ -4,6 +4,7 @@ import CharacterModel from '../models/character';
 
 import SkillShow from '../components/SkillShow';
 import FeatsShow from '../components/FeatsShow';
+import InventoryShow from '../components/InventoryShow'
 
 
 class CharacterShow extends Component {
@@ -53,6 +54,9 @@ class CharacterShow extends Component {
                 <div className = "feat">
                     <h2>Feats</h2>
                     <FeatsShow feat = {feat}/>
+                </div>
+                <div className = "inventory">
+                    <h2>Inventory</h2>
                 </div>
             </div>
         );
