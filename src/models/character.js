@@ -24,7 +24,13 @@ class CharacterModel{
     }
 
     static edit =(characterId , characterData) =>{
-        return
+        return fetch(`${url}/characters/${characterId}`,{
+            method:"PUT",
+            headers:{
+                "Content-Type": "application/json"
+            },
+            body:JSON.stringify(characterData)
+        })
     }
     static destory = (characterData) =>{
         return fetch(`${url}/characters/${characterData}`,{

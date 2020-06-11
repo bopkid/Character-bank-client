@@ -9,7 +9,7 @@ import Login from '../pages/Login'
 import Profile from '../pages/Profile'
 import NewCharacter from '../pages/NewCharacter'
 import About from '../components/About'
-import CharacterEdit from '../components/CharacterEdit'
+import CharacterEdit from '../pages/CharacterEdit'
 
 
 export default (props) =>(
@@ -26,6 +26,7 @@ export default (props) =>(
     }} />
         <Route path ='/about' component ={About} />
         <Route exact path ='/' component = { Home } />
+
         <Route path = '/characters/:id/edit' component = {CharacterEdit} />
         <Route path = '/characters/:id' component = {CharacterShow} />
         <Route path = '/characters' component = { CharacterList} />
