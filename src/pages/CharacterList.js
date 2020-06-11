@@ -4,6 +4,9 @@ import CharacterModel  from '../models/character'
 import { Link } from 'react-router-dom'
 import CharacterCard from '../components/CharacterCard';
 
+import "../CSS/CharacterList.css"
+import {CardGroup} from 'react-bootstrap'
+
 
 
 class CharacterList extends Component {
@@ -31,9 +34,9 @@ class CharacterList extends Component {
         })
 
         return (
-            <div>
+            <CardGroup>
                 {this.state.characters ? characterList : 'Summoning...'}
-            </div>
+            </CardGroup>
         );
     }
 }
