@@ -6,7 +6,7 @@ const InventoryInput = (props) => {
             let invenId = `feat-${idx}`
             return(
                 <div key = {idx}>
-                  <label htmlFor = {invenId}>{` Feat #${idx+1}`}</label>
+                  <label htmlFor = {invenId}>{` inven #${idx+1}`}</label>
                   <input
                       type ="text"
                       name = {invenId}
@@ -14,6 +14,7 @@ const InventoryInput = (props) => {
                       id = {invenId}
                       onChange = {props.handleChange}
                       className ="inven"
+                      value  = {val.inven}
                   />
                 </div>
             )

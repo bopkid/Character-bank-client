@@ -6,7 +6,7 @@ const MagicInput = (props) => {
             let magicId = `feat-${idx}`
             return(
                 <div key = {idx}>
-                  <label htmlFor = {magicId}>{` Feat #${idx+1}`}</label>
+                  <label htmlFor = {magicId}>{` Magic #${idx+1}`}</label>
                   <input
                       type ="text"
                       name = {magicId}
@@ -14,6 +14,7 @@ const MagicInput = (props) => {
                       id = {magicId}
                       onChange = {props.handleChange}
                       className ="magic"
+                      value = {val.magic}
                   />
                 </div>
             )

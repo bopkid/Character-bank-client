@@ -3,6 +3,7 @@ import React from 'react';
 const SkillInput = (props) => {
     return (
       props.skill.map((val,idx) =>{
+          
             let skillid = `skill-${idx}`,levelId = `level-${idx}`
                  return(
                     <div key = {idx}>
@@ -14,6 +15,7 @@ const SkillInput = (props) => {
                             id = {skillid}
                             onChange = {props.handleChange}
                             className = "name"
+                            value ={val.name}
                         />
                         <label htmlFor = {levelId}>{`level #${idx+1}`}</label>
                         <input
@@ -23,6 +25,7 @@ const SkillInput = (props) => {
                             id = {levelId}
                             onChange = {props.handleChange}
                             className = "level"
+                            value ={val.level}
                          />
                     </div>
                  )

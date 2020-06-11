@@ -17,7 +17,6 @@ class CharacterShow extends Component {
             Magic:[{magic:''}]
         },
         currentCharacer: this.props.match.params.id,
-       
     }
 
     componentDidMount(){

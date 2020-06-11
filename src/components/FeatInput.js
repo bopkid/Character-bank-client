@@ -14,6 +14,7 @@ const FeatComponents = (props) => {
                       id = {featId}
                       onChange = {props.handleChange}
                       className ="feats"
+                      value = {val.feats}
                   />
                 </div>
             )
