@@ -29,12 +29,12 @@ class CharacterList extends Component {
     render() {
         let characterList = this.state.characters.map((character,index) =>{
             return (
-                    <CharacterCard {...character} />
+                    <CharacterCard {...character} className ="card"/>
             )
         })
         return (
             <div className ="card-container">
-                <div className = "card">
+                <div className = "card cards">
                     {this.state.characters ? characterList : 'Summoning...'}
                 </div>
             </div>

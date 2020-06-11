@@ -10,4 +10,12 @@
     flex-wrap: wrap;
     margin-right: 50px;
     margin-top: 50px;
+    box-shadow: 10px 5px 5px black;
+    background-color: aliceblue
+}
+
+.cards{
+    background-color: #f7f3ed;
+    
+    
 }

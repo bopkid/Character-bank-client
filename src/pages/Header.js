@@ -18,20 +18,20 @@ const Header = (props) => {
             <nav>
                 <ul>
 
-                    <li><Link to ={'/characters'}>All Character </Link></li>
-                    <li><Link to ={'/about'}>About</Link></li>
+                    <li className = "nav-item"><Link to ={'/characters'}>All Character </Link></li>
+                    <li className = "nav-item"><Link to ={'/about'}>About</Link></li>
 
                     {props.currentUser ?
                     <>
-                    <li><Link to = {`/profile/${props.currentUser}`}>Profile</Link></li>
-                    <li><a href = '/logout' onClick  = {props.logout}>Log out</a></li>
+                    <li className = "nav-item"><Link to = {`/profile/${props.currentUser}`}>Profile</Link></li>
+                    <li className = "nav-item"><a href = '/logout' onClick  = {props.logout}>Log out</a></li>
                     </>
 
                     :
 
                     <>
-                    <li><Link to = {'/register'}>Register</Link></li>
-                    <li><Link to = {'/login'}>Login</Link></li>
+                    <li className = "nav-item"><Link to = {'/register'}>Register</Link></li>
+                    <li className = "nav-item"><Link to = {'/login'}>Login</Link></li>
                     
                     </>
                     }

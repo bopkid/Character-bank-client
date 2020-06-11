@@ -1,0 +1,36 @@
+nav ul{
+    display: flex;
+    flex-direction: row;
+    margin-top: 25px;
+    padding-bottom: 50px;
+    margin-right: 50px;
+}
+header{
+    background-color: #8ab884;
+    box-shadow: 10px 5px 5px #383736;
+}
+
+.nav-item{
+    margin-left: 50px;
+    list-style: none;
+    border: #424f3f solid 2px;
+    padding: 10px;
+    box-shadow: 10px 5px 5px black;
+    
+}
+
+.logo{
+    font-size: 50px;
+    padding-top: 50px;
+    margin-bottom: 50px;
+}
+
+.nav-item:hover{
+    transform: scale(1.2);
+    box-shadow: 10px 5px 5px teal;
+    
+}
+
+.logo:hover{
+    transform: scale(1.2);
+}
