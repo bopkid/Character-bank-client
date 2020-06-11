@@ -1,9 +1,13 @@
 import React from 'react';
 
+import '../CSS/Footer.css'
+
 const Footer = () => {
     return (
-        <div>
-            <p>this will be the footer</p>
+        <div className = "phantom">
+            <div className ="Footer">
+                <p>Character Book</p>
+            </div>
         </div>
     );
 }

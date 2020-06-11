@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import ProfileCharacters from './ProfileCharacters'
-import CharacterModel from '../models/character'
 
 
 class ProfileCharacter extends Component {

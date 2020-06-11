@@ -1,6 +1,10 @@
 import React from 'react';
 
-import {Link} from 'react-router-dom'
+import {Link} from 'react-router-dom';
+
+
+
+import '../CSS/Header.css'
 
 const Header = (props) => {
     console.log(props.currentUser)
@@ -11,7 +15,7 @@ const Header = (props) => {
                 <Link to = {'/'}>Character Bank!</Link>
             </div>
 
-            <div>
+            <nav>
                 <ul>
 
                     <li><Link to ={'/characters'}>All Character </Link></li>
@@ -32,7 +36,8 @@ const Header = (props) => {
                     </>
                     }
                 </ul>
-            </div>
+            </nav>
+       
 
         </header>
     );

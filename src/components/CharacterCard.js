@@ -1,20 +1,20 @@
 import React from 'react';
-import {Card,Button} from 'react-bootstrap';
+import {Card,Button ,Image} from 'react-bootstrap';
+import { Link } from 'react-router-dom'
+import '../CSS/CharacterCard.css'
 
 const CharacterCard = (props) => {
     return (
-        <Card style={{ width: '18rem' }}>
-            <Card.Img variant="top" src={props.img} />
+        <Card style={{ width: '18rem' ,display:'flex'}} className ="card" >
+            <Image src= {props.img} fluid rounded/>
             <Card.Body>
                 <Card.Title>{props.Name}</Card.Title>
                 <Card.Text>
-                Some quick example text to build on the card title and make up the bulk of
-                the card's content.
+                    Bio:{props.Bio}
                 </Card.Text>
-                <Button variant="primary">Go somewhere</Button>
+                <Button variant="primary"><Link to ={`/characters/${props._id}`}>See More</Link></Button>
             </Card.Body>
         </Card>
-
     );
 }
 

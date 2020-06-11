@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import CharacterModel  from '../models/character'
 
-import { Link } from 'react-router-dom'
+
 import CharacterCard from '../components/CharacterCard';
 
 import "../CSS/CharacterList.css"
+
 import {CardGroup} from 'react-bootstrap'
+
 
 
 
@@ -27,16 +29,15 @@ class CharacterList extends Component {
     render() {
         let characterList = this.state.characters.map((character,index) =>{
             return (
-                <Link key = {index} to ={`/characters/${character._id}`}>
                     <CharacterCard {...character} />
-                </Link>
             )
         })
-
         return (
-            <CardGroup>
-                {this.state.characters ? characterList : 'Summoning...'}
-            </CardGroup>
+            <div className ="card-container">
+                <div className = "card">
+                    {this.state.characters ? characterList : 'Summoning...'}
+                </div>
+            </div>
         );
     }
 }
