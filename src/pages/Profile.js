@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ProfileCharacter from '../components/ProfileCharacter';
+import ProfileCharacter from '../components/ProfileCharacterContainer';
 
 import profileModel from '../models/profile';
 import CharacterModel from '../models/character'
@@ -29,9 +29,21 @@ class Profile extends Component {
             characters: e.characters
         }))
     }
+
+    deleteCharacter =(character) =>{
+ 
+        CharacterModel.destory(character)
+        .then(e=>
+            CharacterModel.find(this.state.currentUser)
+            .then(r=> this.setState({
+                characters: r.characters
+            }))
+            )
+  
+    }
  
     render() {
-        console.log(this.state.characters)
+
         return (
             <div>
 
@@ -39,7 +51,10 @@ class Profile extends Component {
                 <div>
                     <Link to ={`/profile/${this.state.profile._id}/new`} >Create New Character</Link>
                     <div className ="characters">
-                        <ProfileCharacter characters = {this.state.characters} />
+                        <ProfileCharacter 
+                        characters = {this.state.characters}
+                        deleteCharacter = {this.deleteCharacter}
+                        />
                     </div>
                    
                 </div>

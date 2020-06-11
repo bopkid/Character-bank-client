@@ -22,6 +22,19 @@ class CharacterModel{
         .then(res => res.json())
 
     }
+
+    static edit =(characterId , characterData) =>{
+        return
+    }
+    static destory = (characterData) =>{
+        return fetch(`${url}/characters/${characterData}`,{
+            method: "DELETE",
+            headers: {
+                "Content-Type": "application/json"
+            },
+        })
+        .then(res => res.json)
+    }
     static find = (userId) =>{
         console.log('')
         return fetch(`${url}/characters/user/${userId}`)

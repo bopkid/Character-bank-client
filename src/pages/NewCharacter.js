@@ -102,7 +102,6 @@ class NewCharacter extends Component {
 
     render() {
 
-        console.log(this.state.Skill)
         return (
                     <form onSubmit = {this.handleSubmit}>
                         <div className = "form-input">
