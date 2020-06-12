@@ -134,6 +134,8 @@ class NewCharacter extends Component {
                         <div className ="form-input bio">
                             <label htmlFor = "Bio">Bio</label>
                             <textarea
+                               rows="5" cols="40"
+                                className ="Bio"
                                 type ="text"
                                 name = "Bio"
                                 onChange ={this.handleChange}

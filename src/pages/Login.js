@@ -19,7 +19,7 @@ class Login extends Component {
         
         UserModel.login(this.state)
         .then(data =>{
-            console.log(data)
+           
         if(!data.data){
             return false
         }

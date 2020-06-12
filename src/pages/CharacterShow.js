@@ -7,6 +7,8 @@ import FeatsShow from '../components/FeatsShow';
 import InventoryShow from '../components/InventoryShow';
 import MagicShow from '../components/MagicShow';
 
+import '../CSS/CharacterShow.css'
+
 
 class CharacterShow extends Component {
     state= {
@@ -37,13 +39,16 @@ class CharacterShow extends Component {
       const feat = this.state.character.Feats
       const inven =this.state.character.Inventory
       const magic = this.state.character.Magic
-      console.log(feat)
+    
         return (
             
-            <div>
+            <div class ="character-container">
                 <h2>{this.state.character.Name}</h2>
                 <img src ={this.state.character.img} alt = {this.state.character.name}/>
-                <p>Bio:{this.state.character.Bio}</p>
+                <p>
+                    <h2>Bio:</h2>
+                    {this.state.character.Bio}
+                    </p>
                 <div className = "system">
                     <h2>System:</h2>
                     <p>{this.state.character.System}</p>
