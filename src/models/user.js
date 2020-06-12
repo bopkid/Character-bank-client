@@ -1,4 +1,4 @@
-const REACT_APP_API_URL = "http://localhost:3001/api"
+const REACT_APP_API_URL = "https://morning-fjord-30373.herokuapp.com/api"
 
 
 export default class UserModel {
