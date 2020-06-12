@@ -7,7 +7,6 @@ import {Link} from 'react-router-dom';
 import '../CSS/Header.css'
 
 const Header = (props) => {
-    console.log(props.currentUser)
     return (
         <header>
 

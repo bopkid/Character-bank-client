@@ -25,7 +25,7 @@ class NewCharacter extends Component {
         CharacterModel.create(this.state)
         
         .then(data =>{
-            console.log(data)
+          
             this.props.history.push('/characters')
         })
     }
@@ -58,7 +58,7 @@ class NewCharacter extends Component {
             this.setState({feat} , () =>console.log(this.state.feat))
         }
         else{
-            console.log('here')
+            
         this.setState({
             
             [e.target.name] : e.target.value
@@ -77,7 +77,7 @@ class NewCharacter extends Component {
     }
     
     NewFeat = (e) =>{
-        console.log(this.state.Feats)
+       
         e.preventDefault()
         this.setState((prevstate) =>({
             Feats: [...prevstate.Feats, {feats: ""}]
@@ -85,7 +85,7 @@ class NewCharacter extends Component {
     }
 
     newInven = (e) =>{
-        console.log(this.state.Inventory)
+  
         e.preventDefault()
         this.setState((prevstate) =>({
             Inventory: [...prevstate.Inventory, {inven: ""}]
@@ -93,7 +93,7 @@ class NewCharacter extends Component {
     }
     
     newMagic = (e) =>{
-        console.log(this.state.Magic)
+        
         e.preventDefault()
         this.setState((prevstate) =>({
             Magic: [...prevstate.Magic, {magic: ""}]
