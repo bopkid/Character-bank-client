@@ -10,7 +10,7 @@ const CharacterCard = (props) => {
             <Card.Body>
                 <Card.Title>{props.Name}</Card.Title>
                 <Card.Text>
-                    Bio:{props.Bio}
+                    System:{props.System}
                 </Card.Text>
                 <Button variant="primary"><Link to ={`/characters/${props._id}`}>See More</Link></Button>
             </Card.Body>
