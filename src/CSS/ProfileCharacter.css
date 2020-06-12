@@ -1,0 +1,12 @@
+.characters{
+    display: flex;
+    flex-direction: row;
+   justify-content: center;
+   padding-top: 150px;
+
+}
+
+
+.profile-container{
+    max-height: 25%;
+}

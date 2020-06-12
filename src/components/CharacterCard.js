@@ -6,7 +6,7 @@ import '../CSS/CharacterCard.css'
 const CharacterCard = (props) => {
     return (
         <Card style={{ width: '18rem' ,display:'flex'}} className ="card" >
-            <Image src= {props.img} fluid rounded/>
+            <Image src= {props.img} fluid />
             <Card.Body>
                 <Card.Title>{props.Name}</Card.Title>
                 <Card.Text>

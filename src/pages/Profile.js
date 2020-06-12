@@ -4,6 +4,7 @@ import ProfileCharacter from '../components/ProfileCharacterContainer';
 import profileModel from '../models/profile';
 import CharacterModel from '../models/character'
 
+import '../CSS/Profile.css'
 
 import { Link } from 'react-router-dom'
 
@@ -48,12 +49,13 @@ class Profile extends Component {
             <div>
 
                 <h2>Welcome Back {this.state.profile.name} </h2>
-                <div>
-                    <Link to ={`/profile/${this.state.profile._id}/new`} >Create New Character</Link>
-                    <div className ="characters">
+                <Link to ={`/profile/${this.state.profile._id}/new`} >Create New Character</Link>
+                <div className ="profile-container">
+                    <div className ="profile-section">
                         <ProfileCharacter 
                         characters = {this.state.characters}
                         deleteCharacter = {this.deleteCharacter}
+                        className ="card"
                         />
                     </div>
                    

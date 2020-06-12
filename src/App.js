@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom'
 import Routes from './config/routes'
 
 import Header from './pages/Header'
-import Footer  from './pages/Footer'
+
 
 import './App.css';
 import UserModel from './models/user';
@@ -39,7 +39,7 @@ function App (props) {
          currentUser = { currentUser }
          storeUser = { storeUser }
       />
-    <Footer />
+   
     </div>
   );
 }
