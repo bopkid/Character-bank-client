@@ -1,18 +1,18 @@
-const url = `http://localhost:3001/api`
+const REACT_APP_API_URL = `http://localhost:3001/api`
 
 class CharacterModel{
     static all = () => {
-        return fetch(`${url}/characters`)
+        return fetch(`${REACT_APP_API_URL}/characters`)
         .then(res => res.json())
     }
     static show = (characterId) =>{
         console.log(characterId)
-        return fetch(`${url}/characters/${characterId}`)
+        return fetch(`${REACT_APP_API_URL}/characters/${characterId}`)
         .then(res => res.json())
         
     }
     static create = (characterData) =>{
-        return fetch(`${url}/characters`,{
+        return fetch(`${REACT_APP_API_URL}/characters`,{
             method: "POST", 
             headers: {
                 "Content-Type": "application/json"
@@ -24,7 +24,7 @@ class CharacterModel{
     }
 
     static edit =(characterId , characterData) =>{
-        return fetch(`${url}/characters/${characterId}`,{
+        return fetch(`${REACT_APP_API_URL}/characters/${characterId}`,{
             method:"PUT",
             headers:{
                 "Content-Type": "application/json"
@@ -33,7 +33,7 @@ class CharacterModel{
         })
     }
     static destory = (characterData) =>{
-        return fetch(`${url}/characters/${characterData}`,{
+        return fetch(`${REACT_APP_API_URL}/characters/${characterData}`,{
             method: "DELETE",
             headers: {
                 "Content-Type": "application/json"
@@ -43,7 +43,7 @@ class CharacterModel{
     }
     static find = (userId) =>{
         console.log('')
-        return fetch(`${url}/characters/user/${userId}`)
+        return fetch(`${REACT_APP_API_URL}/characters/user/${userId}`)
         .then(res =>res.json())
     }
 }
