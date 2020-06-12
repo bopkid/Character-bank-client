@@ -6,7 +6,6 @@ class CharacterModel{
         .then(res => res.json())
     }
     static show = (characterId) =>{
-        console.log(characterId)
         return fetch(`${REACT_APP_API_URL}/characters/${characterId}`)
         .then(res => res.json())
         
@@ -42,7 +41,7 @@ class CharacterModel{
         .then(res => res.json)
     }
     static find = (userId) =>{
-        console.log('')
+     
         return fetch(`${REACT_APP_API_URL}/characters/user/${userId}`)
         .then(res =>res.json())
     }

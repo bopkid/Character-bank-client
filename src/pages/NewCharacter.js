@@ -33,26 +33,26 @@ class NewCharacter extends Component {
     handleChange = (e) =>{
        
         if (["name","level"].includes(e.target.className)){
-            console.log('skill')
+            
             let skill = [...this.state.Skill]
             skill[e.target.dataset.id][e.target.className] = e.target.value
             this.setState({skill} , ()=>console.log(this.state.skill))
         }
         else if (["magic"].includes(e.target.className)){
-            console.log('magic')
+            
             let magic = [...this.state.Magic]
             magic[e.target.dataset.id][e.target.className] = e.target.value
             this.setState({magic}, () =>console.log(this.state.Magic))
         }  
         else if (["inven"].includes(e.target.className)){
-            console.log('inven')
+            
             let inven  = [...this.state.Inventory]
             inven[e.target.dataset.id][e.target.className] = e.target.value
             this.setState({inven} ,() =>console.log(this.state.Inventory))
         }   
         
         else if (["feats"].includes(e.target.className)){
-            console.log("feats")
+            
             let feat = [...this.state.Feats]
             feat[e.target.dataset.id][e.target.className] = e.target.value
             this.setState({feat} , () =>console.log(this.state.feat))

@@ -25,9 +25,7 @@ const Header = (props) => {
                     <li className = "nav-item"><Link to = {`/profile/${props.currentUser}`}>Profile</Link></li>
                     <li className = "nav-item"><a href = '/logout' onClick  = {props.logout}>Log out</a></li>
                     </>
-
                     :
-
                     <>
                     <li className = "nav-item"><Link to = {'/register'}>Register</Link></li>
                     <li className = "nav-item"><Link to = {'/login'}>Login</Link></li>

@@ -25,7 +25,7 @@ export default class UserModel {
       }
     
     static logout(){
-        console.log('loggin out')
+
         return fetch(`${REACT_APP_API_URL}/auth/logout`,{
             method: "DELETE",
             credentials: 'include'
