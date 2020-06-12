@@ -21,7 +21,6 @@ function App (props) {
     localStorage.removeItem('uid')
     UserModel.logout()
     .then(res =>{
-      console.log(res)
       setCurrentUser(null)
       props.history.push('/login')
     })
