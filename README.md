@@ -1,68 +1,48 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Project 4 Character Bank Client
 
-## Available Scripts
+By Alvin Wong
 
-In the project directory, you can run:
+## Scope
 
-### `npm start`
+This Client is built in React and provides the user interaction. Providing user to make and store characters.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## Tool Used
+    -React
+    -Bootstrap
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+## User Stories
 
-### `npm test`
+I. The User will see the home page of website see 'Welcome to Character Bank'
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+II. The nav will have 'all character', 'about' , 'Register' , and 'login'
 
-### `npm run build`
+III. When User click All Character the user will see all the character stored on this site
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+IV. When the user clicks on a charcter the user will see the character in more detail 
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+v.When user clicks about they will see a about page and about the website
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+VI. When user clicks Register they will be brought to the resgister page 
 
-### `npm run eject`
+VII. Whent the user register they will be brought to a blank page with logo and nav will have changed
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+VIII. The user will see a logout and profile nav
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+IX. When the user clicks profile they see their name and  create character and their charcter they have made which should be blank from the start.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+X. When the user clicks create a character they will see inputs to put data into 
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+XI. When user clicks edit charcater they see the same sorta input from create and they can edit the data as they which
 
-## Learn More
+XII.When user clicks delete they will delete the character.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Wireframes
 
-### Code Splitting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+![About](wireframes/About.png)
+![Model](wireframes/datamodel.png)
+![profile](wireframes/loggin.png)
+![loginmodal](wireframes/loginmodel.png)
+![new](wireframes/NewChracter.png)
+![Register](wireframes/Register.png)
